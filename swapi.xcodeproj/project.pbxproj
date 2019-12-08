@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		3A69BDE5239CEE9C0022C9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */; };
 		3A69BDE7239CEE9C0022C9D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDE6239CEE9C0022C9D0 /* ViewController.swift */; };
-		3A69BDEA239CEE9C0022C9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A69BDE8239CEE9C0022C9D0 /* Main.storyboard */; };
 		3A69BDEC239CEE9E0022C9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */; };
-		3A69BDEF239CEE9E0022C9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A69BDED239CEE9E0022C9D0 /* LaunchScreen.storyboard */; };
 		3A69BDFA239CEE9E0022C9D0 /* swapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDF9239CEE9E0022C9D0 /* swapiTests.swift */; };
+		3AE8673F239CFF9800B3D1BE /* SWPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8673E239CFF9800B3D1BE /* SWPeople.swift */; };
+		3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86740239CFFD800B3D1BE /* SWPerson.swift */; };
+		3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		3A69BDE1239CEE9C0022C9D0 /* swapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A69BDE6239CEE9C0022C9D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A69BDE9239CEE9C0022C9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A69BDEE239CEE9E0022C9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A69BDF0239CEE9E0022C9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A69BDF5239CEE9E0022C9D0 /* swapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A69BDF9239CEE9E0022C9D0 /* swapiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swapiTests.swift; sourceTree = "<group>"; };
 		3A69BDFB239CEE9E0022C9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AE8673E239CFF9800B3D1BE /* SWPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPeople.swift; sourceTree = "<group>"; };
+		3AE86740239CFFD800B3D1BE /* SWPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPerson.swift; sourceTree = "<group>"; };
+		3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,12 @@
 		3A69BDE3239CEE9C0022C9D0 /* swapi */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8673E239CFF9800B3D1BE /* SWPeople.swift */,
+				3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */,
+				3AE86740239CFFD800B3D1BE /* SWPerson.swift */,
 				3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */,
 				3A69BDE6239CEE9C0022C9D0 /* ViewController.swift */,
-				3A69BDE8239CEE9C0022C9D0 /* Main.storyboard */,
 				3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */,
-				3A69BDED239CEE9E0022C9D0 /* LaunchScreen.storyboard */,
 				3A69BDF0239CEE9E0022C9D0 /* Info.plist */,
 			);
 			path = swapi;
@@ -177,9 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A69BDEF239CEE9E0022C9D0 /* LaunchScreen.storyboard in Resources */,
 				3A69BDEC239CEE9E0022C9D0 /* Assets.xcassets in Resources */,
-				3A69BDEA239CEE9C0022C9D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE8673F239CFF9800B3D1BE /* SWPeople.swift in Sources */,
 				3A69BDE7239CEE9C0022C9D0 /* ViewController.swift in Sources */,
+				3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */,
+				3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */,
 				3A69BDE5239CEE9C0022C9D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,25 +223,6 @@
 			targetProxy = 3A69BDF6239CEE9E0022C9D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3A69BDE8239CEE9C0022C9D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A69BDE9239CEE9C0022C9D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3A69BDED239CEE9E0022C9D0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A69BDEE239CEE9E0022C9D0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A69BDFC239CEE9E0022C9D0 /* Debug */ = {
