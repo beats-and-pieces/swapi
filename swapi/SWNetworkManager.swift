@@ -8,32 +8,49 @@
 
 import Foundation
 
-class SWNetworkManager {
+protocol SWNetworkManagerOutputProtocol: class {
+    func updateData()
+}
+
+class SWNetworkManager: SWNetworkManagerInputProtocol {
+    var urlString = "https://swapi.co/api/people"
+    var arrayOfPersons = [SWPerson]() {
+        didSet {
+            delegate?.updateData()
+            print("new boss just come")
+        }
+    }
+    
+    weak var delegate: SWNetworkManagerOutputProtocol?
+    
+    func people() -> [SWPerson] {
+        return self.arrayOfPersons
+    }
+    
+    init() {
+        getData()
+    }
+    
     func getData() {
-        guard let url = URL(string: "https://swapi.co/api/people") else {return}
+        guard let url = URL(string: urlString) else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let dataResponse = data,
                 error == nil else {
                     print(error?.localizedDescription ?? "Response Error")
                     return }
             do {
-                //here dataResponse received from a network request
                 let decoder = JSONDecoder()
-                let model = try decoder.decode(SWPeople.self, from: dataResponse) //Decode JSON Response Data
-                print(model)
+                let model = try decoder.decode(SWPeople.self, from: dataResponse)
+                self.arrayOfPersons += model.results
+                self.urlString = model.next ?? "https://swapi.co/api/people"
             } catch let parsingError {
                 print("Error", parsingError)
             }
-            
-//            do{
-//                //here dataResponse received from a network request
-//                let jsonResponse = try JSONSerialization.jsonObject(with:
-//                    dataResponse, options: [])
-//                print(jsonResponse) //Response result
-//            } catch let parsingError {
-//                print("Error", parsingError)
-//            }
         }
         task.resume()
+    }
+    
+    func loadNextPage() {
+        getData()
     }
 }

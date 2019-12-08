@@ -13,19 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        let assembly = SWAssembly()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        // (2)
-        window?.rootViewController = SWAssembly.getViewController()
-        // (3)
+        window?.rootViewController = assembly.getViewController()
         window?.makeKeyAndVisible()
         
-        let networkManager = SWNetworkManager()
-        networkManager.getData()
         return true
     }
-    
 }
 

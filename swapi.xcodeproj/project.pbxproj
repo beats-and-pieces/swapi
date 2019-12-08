@@ -9,48 +9,31 @@
 /* Begin PBXBuildFile section */
 		3A69BDE5239CEE9C0022C9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */; };
 		3A69BDEC239CEE9E0022C9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */; };
-		3A69BDFA239CEE9E0022C9D0 /* swapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDF9239CEE9E0022C9D0 /* swapiTests.swift */; };
 		3AE8673F239CFF9800B3D1BE /* SWPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8673E239CFF9800B3D1BE /* SWPeople.swift */; };
 		3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86740239CFFD800B3D1BE /* SWPerson.swift */; };
 		3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */; };
 		3AE86745239D035100B3D1BE /* SWTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86744239D035100B3D1BE /* SWTableViewController.swift */; };
 		3AE86747239D0FA000B3D1BE /* SWAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86746239D0FA000B3D1BE /* SWAssembly.swift */; };
+		3AE86750239D3CCE00B3D1BE /* SWPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8674F239D3CCE00B3D1BE /* SWPersonViewController.swift */; };
+		3AE86752239D44A200B3D1BE /* SWPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86751239D44A200B3D1BE /* SWPersonView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3A69BDF6239CEE9E0022C9D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A69BDD9239CEE9C0022C9D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A69BDE0239CEE9C0022C9D0;
-			remoteInfo = swapi;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A69BDE1239CEE9C0022C9D0 /* swapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A69BDF0239CEE9E0022C9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A69BDF5239CEE9E0022C9D0 /* swapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A69BDF9239CEE9E0022C9D0 /* swapiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swapiTests.swift; sourceTree = "<group>"; };
-		3A69BDFB239CEE9E0022C9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AE8673E239CFF9800B3D1BE /* SWPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPeople.swift; sourceTree = "<group>"; };
 		3AE86740239CFFD800B3D1BE /* SWPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPerson.swift; sourceTree = "<group>"; };
 		3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNetworkManager.swift; sourceTree = "<group>"; };
 		3AE86744239D035100B3D1BE /* SWTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTableViewController.swift; sourceTree = "<group>"; };
 		3AE86746239D0FA000B3D1BE /* SWAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAssembly.swift; sourceTree = "<group>"; };
+		3AE8674F239D3CCE00B3D1BE /* SWPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPersonViewController.swift; sourceTree = "<group>"; };
+		3AE86751239D44A200B3D1BE /* SWPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3A69BDDE239CEE9C0022C9D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A69BDF2239CEE9E0022C9D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				3A69BDE3239CEE9C0022C9D0 /* swapi */,
-				3A69BDF8239CEE9E0022C9D0 /* swapiTests */,
 				3A69BDE2239CEE9C0022C9D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				3A69BDE1239CEE9C0022C9D0 /* swapi.app */,
-				3A69BDF5239CEE9E0022C9D0 /* swapiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,31 +62,24 @@
 		3A69BDE3239CEE9C0022C9D0 /* swapi */ = {
 			isa = PBXGroup;
 			children = (
-				3AE8673E239CFF9800B3D1BE /* SWPeople.swift */,
-				3AE86740239CFFD800B3D1BE /* SWPerson.swift */,
 				3AE86748239D135600B3D1BE /* Model */,
 				3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */,
 				3AE86746239D0FA000B3D1BE /* SWAssembly.swift */,
-				3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */,
 				3AE86744239D035100B3D1BE /* SWTableViewController.swift */,
+				3AE8674F239D3CCE00B3D1BE /* SWPersonViewController.swift */,
+				3AE86751239D44A200B3D1BE /* SWPersonView.swift */,
+				3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */,
 				3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */,
 				3A69BDF0239CEE9E0022C9D0 /* Info.plist */,
 			);
 			path = swapi;
 			sourceTree = "<group>";
 		};
-		3A69BDF8239CEE9E0022C9D0 /* swapiTests */ = {
-			isa = PBXGroup;
-			children = (
-				3A69BDF9239CEE9E0022C9D0 /* swapiTests.swift */,
-				3A69BDFB239CEE9E0022C9D0 /* Info.plist */,
-			);
-			path = swapiTests;
-			sourceTree = "<group>";
-		};
 		3AE86748239D135600B3D1BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8673E239CFF9800B3D1BE /* SWPeople.swift */,
+				3AE86740239CFFD800B3D1BE /* SWPerson.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -130,24 +104,6 @@
 			productReference = 3A69BDE1239CEE9C0022C9D0 /* swapi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A69BDF4239CEE9E0022C9D0 /* swapiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A69BE01239CEE9E0022C9D0 /* Build configuration list for PBXNativeTarget "swapiTests" */;
-			buildPhases = (
-				3A69BDF1239CEE9E0022C9D0 /* Sources */,
-				3A69BDF2239CEE9E0022C9D0 /* Frameworks */,
-				3A69BDF3239CEE9E0022C9D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A69BDF7239CEE9E0022C9D0 /* PBXTargetDependency */,
-			);
-			name = swapiTests;
-			productName = swapiTests;
-			productReference = 3A69BDF5239CEE9E0022C9D0 /* swapiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,10 +116,6 @@
 				TargetAttributes = {
 					3A69BDE0239CEE9C0022C9D0 = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					3A69BDF4239CEE9E0022C9D0 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 3A69BDE0239CEE9C0022C9D0;
 					};
 				};
 			};
@@ -181,7 +133,6 @@
 			projectRoot = "";
 			targets = (
 				3A69BDE0239CEE9C0022C9D0 /* swapi */,
-				3A69BDF4239CEE9E0022C9D0 /* swapiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,13 +146,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A69BDF3239CEE9E0022C9D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -210,31 +154,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE8673F239CFF9800B3D1BE /* SWPeople.swift in Sources */,
+				3AE86752239D44A200B3D1BE /* SWPersonView.swift in Sources */,
 				3AE86747239D0FA000B3D1BE /* SWAssembly.swift in Sources */,
 				3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */,
 				3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */,
 				3A69BDE5239CEE9C0022C9D0 /* AppDelegate.swift in Sources */,
 				3AE86745239D035100B3D1BE /* SWTableViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A69BDF1239CEE9E0022C9D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A69BDFA239CEE9E0022C9D0 /* swapiTests.swift in Sources */,
+				3AE86750239D3CCE00B3D1BE /* SWPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3A69BDF7239CEE9E0022C9D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A69BDE0239CEE9C0022C9D0 /* swapi */;
-			targetProxy = 3A69BDF6239CEE9E0022C9D0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3A69BDFC239CEE9E0022C9D0 /* Debug */ = {
@@ -389,48 +319,6 @@
 			};
 			name = Release;
 		};
-		3A69BE02239CEE9E0022C9D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8RKZA6P4R;
-				INFOPLIST_FILE = swapiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-r34r23.swapiTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swapi.app/swapi";
-			};
-			name = Debug;
-		};
-		3A69BE03239CEE9E0022C9D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8RKZA6P4R;
-				INFOPLIST_FILE = swapiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-r34r23.swapiTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swapi.app/swapi";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,15 +336,6 @@
 			buildConfigurations = (
 				3A69BDFF239CEE9E0022C9D0 /* Debug */,
 				3A69BE00239CEE9E0022C9D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A69BE01239CEE9E0022C9D0 /* Build configuration list for PBXNativeTarget "swapiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A69BE02239CEE9E0022C9D0 /* Debug */,
-				3A69BE03239CEE9E0022C9D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

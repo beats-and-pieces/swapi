@@ -9,11 +9,17 @@
 import UIKit
 
 class SWAssembly {
-    static func getViewController() -> UIViewController {
-        let navigationController = UINavigationController()
-        let tableViewController = SWTableViewController()
+    var navigationController: UINavigationController
+    init() {
+        let networkManager = SWNetworkManager()
+        let tableViewController = SWPeopleTableViewController(networkManager: networkManager)
         tableViewController.title = "People of Star Wars"
+
+        navigationController = UINavigationController()
         navigationController.viewControllers = [tableViewController]
+    }
+    
+    func getViewController() -> UIViewController {
         return navigationController
     }
 }
