@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        // (2)
+        window?.rootViewController = SWAssembly.getViewController()
+        // (3)
+        window?.makeKeyAndVisible()
+        
         let networkManager = SWNetworkManager()
         networkManager.getData()
         return true

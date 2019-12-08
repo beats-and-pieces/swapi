@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3A69BDE5239CEE9C0022C9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */; };
-		3A69BDE7239CEE9C0022C9D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDE6239CEE9C0022C9D0 /* ViewController.swift */; };
 		3A69BDEC239CEE9E0022C9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */; };
 		3A69BDFA239CEE9E0022C9D0 /* swapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69BDF9239CEE9E0022C9D0 /* swapiTests.swift */; };
 		3AE8673F239CFF9800B3D1BE /* SWPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8673E239CFF9800B3D1BE /* SWPeople.swift */; };
 		3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86740239CFFD800B3D1BE /* SWPerson.swift */; };
 		3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */; };
+		3AE86745239D035100B3D1BE /* SWTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86744239D035100B3D1BE /* SWTableViewController.swift */; };
+		3AE86747239D0FA000B3D1BE /* SWAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86746239D0FA000B3D1BE /* SWAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,6 @@
 /* Begin PBXFileReference section */
 		3A69BDE1239CEE9C0022C9D0 /* swapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A69BDE6239CEE9C0022C9D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A69BDF0239CEE9E0022C9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A69BDF5239CEE9E0022C9D0 /* swapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +38,8 @@
 		3AE8673E239CFF9800B3D1BE /* SWPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPeople.swift; sourceTree = "<group>"; };
 		3AE86740239CFFD800B3D1BE /* SWPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPerson.swift; sourceTree = "<group>"; };
 		3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNetworkManager.swift; sourceTree = "<group>"; };
+		3AE86744239D035100B3D1BE /* SWTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTableViewController.swift; sourceTree = "<group>"; };
+		3AE86746239D0FA000B3D1BE /* SWAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				3AE8673E239CFF9800B3D1BE /* SWPeople.swift */,
-				3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */,
 				3AE86740239CFFD800B3D1BE /* SWPerson.swift */,
+				3AE86748239D135600B3D1BE /* Model */,
+				3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */,
+				3AE86746239D0FA000B3D1BE /* SWAssembly.swift */,
 				3A69BDE4239CEE9C0022C9D0 /* AppDelegate.swift */,
-				3A69BDE6239CEE9C0022C9D0 /* ViewController.swift */,
+				3AE86744239D035100B3D1BE /* SWTableViewController.swift */,
 				3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */,
 				3A69BDF0239CEE9E0022C9D0 /* Info.plist */,
 			);
@@ -97,6 +101,13 @@
 				3A69BDFB239CEE9E0022C9D0 /* Info.plist */,
 			);
 			path = swapiTests;
+			sourceTree = "<group>";
+		};
+		3AE86748239D135600B3D1BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,10 +210,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE8673F239CFF9800B3D1BE /* SWPeople.swift in Sources */,
-				3A69BDE7239CEE9C0022C9D0 /* ViewController.swift in Sources */,
+				3AE86747239D0FA000B3D1BE /* SWAssembly.swift in Sources */,
 				3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */,
 				3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */,
 				3A69BDE5239CEE9C0022C9D0 /* AppDelegate.swift in Sources */,
+				3AE86745239D035100B3D1BE /* SWTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
