@@ -12,19 +12,13 @@ protocol SWNetworkManagerOutputProtocol: class {
     func updateData()
 }
 
-class SWNetworkManager: SWNetworkManagerInputProtocol {
+class SWNetworkManager {
+    weak var delegate: SWNetworkManagerOutputProtocol?
     var urlString = "https://swapi.co/api/people"
     var arrayOfPersons = [SWPerson]() {
         didSet {
             delegate?.updateData()
-            print("new boss just come")
         }
-    }
-    
-    weak var delegate: SWNetworkManagerOutputProtocol?
-    
-    func people() -> [SWPerson] {
-        return self.arrayOfPersons
     }
     
     init() {
@@ -49,8 +43,10 @@ class SWNetworkManager: SWNetworkManagerInputProtocol {
         }
         task.resume()
     }
-    
-    func loadNextPage() {
-        getData()
+}
+
+extension SWNetworkManager: SWNetworkManagerInputProtocol {
+    func people() -> [SWPerson] {
+        return self.arrayOfPersons
     }
 }

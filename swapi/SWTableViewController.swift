@@ -6,15 +6,16 @@
 //  Copyright © 2019 Anton Kuznetsov. All rights reserved.
 //
 
+import UIKit
+
+
 protocol SWNetworkManagerInputProtocol {
     func people() -> [SWPerson]
-    func loadNextPage()
     var delegate: SWNetworkManagerOutputProtocol? {get set}
 }
 
-import UIKit
+
 class SWPeopleTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -57,7 +58,6 @@ class SWPeopleTableViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: personCellIdentifier, for: indexPath)
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: personCellIdentifier)
         let person = self.networkManager.people()[indexPath.row]
         cell.textLabel?.text = person.name
