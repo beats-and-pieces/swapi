@@ -25,7 +25,7 @@ class SWPeopleTableViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        networkManager.loadFromWeb { (people, error) in
+        networkManager.loadFromWeb {[unowned self] (people, error) in
             if error == nil {
                 self.people = people
                 DispatchQueue.main.async {
