@@ -15,10 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let assembly = SWAssembly()
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = assembly.getViewController()
+        window?.rootViewController = {
+            let navigationController = UINavigationController()
+            let tableViewController = SWPeopleTableViewController()
+            tableViewController.title = "People of Star Wars"
+            navigationController.viewControllers = [tableViewController]
+            return navigationController
+        }()
         window?.makeKeyAndVisible()
         
         return true

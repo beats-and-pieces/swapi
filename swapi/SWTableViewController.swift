@@ -9,12 +9,6 @@
 import UIKit
 
 
-protocol SWNetworkManagerInputProtocol {
-    func people() -> [SWPerson]
-    var delegate: SWNetworkManagerOutputProtocol? {get set}
-}
-
-
 class SWPeopleTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private lazy var tableView: UITableView = {
@@ -23,24 +17,24 @@ class SWPeopleTableViewController: UIViewController, UITableViewDelegate, UITabl
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: personCellIdentifier)
         return tableView
     }()
-    
     let personCellIdentifier = "personCellIdentifier"
-    var networkManager: SWNetworkManagerInputProtocol!
-    
-    init(networkManager: SWNetworkManagerInputProtocol) {
-        super.init(nibName: nil, bundle: nil)
-        self.networkManager = networkManager
-        self.networkManager.delegate = self
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.networkManager = nil
-        super.init(coder: aDecoder)
-    }
+    var people = [SWPerson]()
+    var networkManager = SWNetworkManager()
+    var loadingSuccedded = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        networkManager.loadFromWeb { (people, error) in
+            if error == nil {
+                self.people = people
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else {
+                self.loadingSuccedded = false
+            }
+        }
     }
     
     func setupTableView() {
@@ -54,29 +48,21 @@ class SWPeopleTableViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return networkManager.people().count
+        return loadingSuccedded ? people.count : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: personCellIdentifier)
-        let person = self.networkManager.people()[indexPath.row]
-        cell.textLabel?.text = person.name
-        cell.detailTextLabel?.text = person.birth_year
+        
+        cell.textLabel?.text = loadingSuccedded ? people[indexPath.row].name : "Loading error"
+        cell.detailTextLabel?.text = loadingSuccedded ? people[indexPath.row].birth_year : "Please check your connection"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let destination = SWPersonViewController(person: self.networkManager.people()[indexPath.row])
+        let destination = SWPersonViewController(person: people[indexPath.row])
         navigationController?.pushViewController(destination, animated: true)
-    }
-}
-
-extension SWPeopleTableViewController: SWNetworkManagerOutputProtocol {
-    func updateData() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
     }
 }
 

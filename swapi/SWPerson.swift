@@ -6,7 +6,6 @@
 //  Copyright © 2019 Anton Kuznetsov. All rights reserved.
 //
 
-import Foundation
 
 struct SWPerson: Codable {
     var name: String

@@ -6,9 +6,8 @@
 //  Copyright © 2019 Anton Kuznetsov. All rights reserved.
 //
 
-import Foundation
 
-class SWPeople: Codable {
+struct SWPeople: Codable {
     var count: Int
     var next: String?
     var previous: String?

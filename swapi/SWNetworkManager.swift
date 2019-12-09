@@ -8,45 +8,26 @@
 
 import Foundation
 
-protocol SWNetworkManagerOutputProtocol: class {
-    func updateData()
-}
 
 class SWNetworkManager {
-    weak var delegate: SWNetworkManagerOutputProtocol?
     var urlString = "https://swapi.co/api/people"
-    var arrayOfPersons = [SWPerson]() {
-        didSet {
-            delegate?.updateData()
-        }
-    }
-    
-    init() {
-        getData()
-    }
-    
-    func getData() {
+
+    func loadFromWeb(completionHandler: @escaping ([SWPerson], Error?) -> Void) {
         guard let url = URL(string: urlString) else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let dataResponse = data,
                 error == nil else {
-                    print(error?.localizedDescription ?? "Response Error")
+                    completionHandler([SWPerson](), error)
                     return }
             do {
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(SWPeople.self, from: dataResponse)
-                self.arrayOfPersons += model.results
+                completionHandler(model.results, nil)
                 self.urlString = model.next ?? "https://swapi.co/api/people"
             } catch let parsingError {
-                print("Error", parsingError)
+                completionHandler([SWPerson](), parsingError)
             }
         }
         task.resume()
-    }
-}
-
-extension SWNetworkManager: SWNetworkManagerInputProtocol {
-    func people() -> [SWPerson] {
-        return self.arrayOfPersons
     }
 }
