@@ -12,8 +12,7 @@
 		3AE8673F239CFF9800B3D1BE /* SWPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8673E239CFF9800B3D1BE /* SWPeople.swift */; };
 		3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86740239CFFD800B3D1BE /* SWPerson.swift */; };
 		3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */; };
-		3AE86745239D035100B3D1BE /* SWTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86744239D035100B3D1BE /* SWTableViewController.swift */; };
-		3AE86750239D3CCE00B3D1BE /* SWPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8674F239D3CCE00B3D1BE /* SWPersonViewController.swift */; };
+		3AE86745239D035100B3D1BE /* SWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE86744239D035100B3D1BE /* SWViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +23,7 @@
 		3AE8673E239CFF9800B3D1BE /* SWPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPeople.swift; sourceTree = "<group>"; };
 		3AE86740239CFFD800B3D1BE /* SWPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPerson.swift; sourceTree = "<group>"; };
 		3AE86742239D00C100B3D1BE /* SWNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNetworkManager.swift; sourceTree = "<group>"; };
-		3AE86744239D035100B3D1BE /* SWTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTableViewController.swift; sourceTree = "<group>"; };
-		3AE8674F239D3CCE00B3D1BE /* SWPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPersonViewController.swift; sourceTree = "<group>"; };
+		3AE86744239D035100B3D1BE /* SWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +58,7 @@
 			children = (
 				3AE86753239D45F200B3D1BE /* Singleton */,
 				3AE86748239D135600B3D1BE /* Model */,
-				3AE86744239D035100B3D1BE /* SWTableViewController.swift */,
-				3AE8674F239D3CCE00B3D1BE /* SWPersonViewController.swift */,
+				3AE86744239D035100B3D1BE /* SWViewController.swift */,
 				3A69BDEB239CEE9E0022C9D0 /* Assets.xcassets */,
 				3A69BDF0239CEE9E0022C9D0 /* Info.plist */,
 			);
@@ -159,8 +156,7 @@
 				3AE86741239CFFD800B3D1BE /* SWPerson.swift in Sources */,
 				3AE86743239D00C100B3D1BE /* SWNetworkManager.swift in Sources */,
 				3A69BDE5239CEE9C0022C9D0 /* AppDelegate.swift in Sources */,
-				3AE86745239D035100B3D1BE /* SWTableViewController.swift in Sources */,
-				3AE86750239D3CCE00B3D1BE /* SWPersonViewController.swift in Sources */,
+				3AE86745239D035100B3D1BE /* SWViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
