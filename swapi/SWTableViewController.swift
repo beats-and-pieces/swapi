@@ -15,7 +15,7 @@ protocol TableViewStrategy {
     func viewDidLoad() 
 }
 
-class SWViewController: UIViewController, UITableViewDataSource {
+class SWTableViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return 0 }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { return UITableViewCell() }
         
@@ -43,20 +43,20 @@ class SWViewController: UIViewController, UITableViewDataSource {
 }
 
 
-class SWPeopleTableViewController: SWViewController, TableViewStrategy, UITableViewDelegate {
+class SWPeopleTableViewController: SWTableViewController, TableViewStrategy, UITableViewDelegate {
     var people = [SWPerson]()
     var networkManager = SWNetworkManager()
-    var loadingSuccedded = true
+    var loadingSucceeded = true
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return loadingSuccedded ? people.count : 1
+        return loadingSucceeded ? people.count : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: cellIdentifier)
         
-        cell.textLabel?.text = loadingSuccedded ? people[indexPath.row].name : "Loading error"
-        cell.detailTextLabel?.text = loadingSuccedded ? people[indexPath.row].birth_year : "Please check your connection"
+        cell.textLabel?.text = loadingSucceeded ? people[indexPath.row].name : "Loading error"
+        cell.detailTextLabel?.text = loadingSucceeded ? people[indexPath.row].birth_year : "Please check your connection"
         
         return cell
     }
@@ -78,13 +78,13 @@ class SWPeopleTableViewController: SWViewController, TableViewStrategy, UITableV
                     self.tableView.reloadData()
                 }
             } else {
-                self.loadingSuccedded = false
+                self.loadingSucceeded = false
             }
         }
     }
 }
 
-class SWPersonTableViewController: SWViewController, TableViewStrategy {
+class SWPersonTableViewController: SWTableViewController, TableViewStrategy {
     var person: SWPerson?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
